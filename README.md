@@ -13,4 +13,4 @@
 CRUD описан представлениями, основанными на [классах](https://djbook.ru/rel1.5/topics/class-based-views/generic-display.html). 
 Фильтр представлен функциями.
 
-Приложение размещено на Heroku.
+Приложение размещено на Heroku (https://todoverlan.herokuapp.com/).
