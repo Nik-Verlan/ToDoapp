@@ -1,0 +1,14 @@
+{% extends 'todoapp/main.html' %}
+
+{% block content %}
+
+<head>
+    <title>{{ task.title }}</title>
+</head>
+<body>
+    <center><h3>{{ task.title }}</h3></center>
+    <center><p>{{ task.description }}</p></center>
+    <center><a href=" {% url 'tasklist' %}">Назад</a></center>
+</body>
+
+{% endblock content %}

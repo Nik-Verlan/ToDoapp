@@ -1,0 +1,29 @@
+{% extends 'todoapp/main.html' %}
+
+{% block content %}
+
+
+<center><h1>Лист задач</h1></center>
+<center><td><a href="{% url 'taskcreate' %}">Создать задачу</a></td></center><br>
+
+<center><table>
+    {% for task in tasks %}
+        {% if task.complete %}
+            <tr>
+                <th><s>{{task.title}}</s></th>
+        {% else %}
+                <th>{{task.title}}</th>
+        {% endif %}
+                <td><a href="{% url 'taskdetail' task.id %}">Подробнее</a></td>
+                <td><a href="{% url 'taskupdate' task.id %}">Обновить</a></td>
+                <td><a href="{% url 'taskdelete' task.id %}">Удалить</a></td>
+            </tr>
+    {% empty %}
+    <h3>Нет задач</h3>
+    {% endfor %}
+</table>
+</center><br>
+
+<center><a href="filter_form">Фильтр по приоритету задачи</a></center>
+
+{% endblock content %}

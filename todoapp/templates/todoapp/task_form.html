@@ -1,0 +1,16 @@
+{% extends 'todoapp/main.html' %}
+
+{% block content %}
+
+<head>
+    <title>Обновление задачи</title>
+</head>
+
+<center><h3>Форма для задач</h3></center>
+<a href=" {% url 'tasklist' %}">Назад</a>
+<form method="POST" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Подтвердить">
+</form>
+{% endblock content %}
