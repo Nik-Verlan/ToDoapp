@@ -4,19 +4,19 @@
 
 
 <center><h1>Лист задач</h1></center>
-<center><td><a href="{% url 'taskcreate' %}">Создать задачу</a></td></center><br>
+<center><td><a href="{% url 'taskcreate' %}" class="glow-button">Создать задачу</a></td></center><br>
 
 <center><table>
     {% for task in tasks %}
         {% if task.complete %}
             <tr>
-                <th><s>{{task.title}}</s></th>
+                <th><h3><s>{{task.title}}</s></h3></th>
         {% else %}
-                <th>{{task.title}}</th>
+                <th><h3>{{task.title}}</h3></th>
         {% endif %}
-                <td><a href="{% url 'taskdetail' task.id %}">Подробнее</a></td>
-                <td><a href="{% url 'taskupdate' task.id %}">Обновить</a></td>
-                <td><a href="{% url 'taskdelete' task.id %}">Удалить</a></td>
+                <td><a href="{% url 'taskdetail' task.id %}" class="floating-button">Подробнее</a></td>
+                <td><a href="{% url 'taskupdate' task.id %}" class="floating-button">Обновить</a></td>
+                <td><a href="{% url 'taskdelete' task.id %}" class="floating-button">Удалить</a></td>
             </tr>
     {% empty %}
     <h3>Нет задач</h3>
@@ -24,6 +24,6 @@
 </table>
 </center><br>
 
-<center><a href="filter_form">Фильтр по приоритету задачи</a></center>
+<center><a href="filter_form" class="glow-button">Фильтр по приоритету задачи</a></center>
 
 {% endblock content %}

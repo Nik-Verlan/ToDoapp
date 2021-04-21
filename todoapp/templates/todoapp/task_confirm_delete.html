@@ -6,13 +6,12 @@
     <title>Удаление задачи</title>
 </head>
 
-<a href=" {% url 'tasklist' %}">Назад</a>
-
-<center>
+<br><center>
 <form method = "POST">
     {% csrf_token %}
-    <p>Хотите удалить задачу? "{{ task }}"</p>
-    <input type="submit" value="Удалить">
+    <h2>Хотите удалить задачу? "{{ task }}"</h2>
+    <center><input type="submit" value="Удалить" class="floating-button"></center>
+    <center><a href=" {% url 'tasklist' %}" class="glow-button">Назад</a></center>
 </form>
 </center>
 {% endblock content %}

@@ -5,10 +5,12 @@
 <head>
     <title>{{ task.title }}</title>
 </head>
-<body>
-    <center><h3>{{ task.title }}</h3></center>
+<body><br>
+    <center><h2>{{ task.title }}</h2></center><br>
     <center><p>{{ task.description }}</p></center>
-    <center><a href=" {% url 'tasklist' %}">Назад</a></center>
+    <center><p>Приоритет: {{ task.priority }}</p></center>
+    <center><p>Создана: {{ task.created }}</p></center>
+    <center><a href=" {% url 'tasklist' %}" class="glow-button">Назад</a></center>
 </body>
 
 {% endblock content %}

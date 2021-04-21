@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <title>Фильтр</title>
 </head>
-<body>
-<center><h3>Задачи с выбранным приоритетом:</h3></center><br>
+<body><br>
+<center><h2>Задачи с выбранным приоритетом:</h2></center><br>
     {% if tasks %}
         {% for task in tasks %}
-            <center><a href="{% url 'taskdetail' task.id %}"><h3>{{ task.title }}</h3></a></center>
+            <center><a href="{% url 'taskdetail' task.id %}" ><h3>{{ task.title }}</h3></a></center>
         {% endfor %}
     {% else %}
         <center>Увы, задач с таким приоритетом нет</center>
     {% endif %}<br>
 
-<center><a href=" {% url 'tasklist' %}">На главную</a></center>
+<center><a href=" {% url 'tasklist' %}" class="glow-button">На главную</a></center>
 </body>
 {% endblock content %}

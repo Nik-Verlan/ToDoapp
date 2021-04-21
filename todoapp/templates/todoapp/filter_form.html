@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <title>Фильтр</title>
 </head>
-<body>
-<center><h3>Форма для фильтра</h3></center><br>
-    <form action="filter_task" method="POST">
+<body><br>
+<center><h2>Форма для фильтра</h2></center><br>
+    <center><form action="filter_task" method="POST">
     {% csrf_token %}
     Выбрать задачи с приоритетом: {{ form.priority }}<br><br>
-    <center><input type="Submit" name="submit" value="Submit"/></center><br>
-    </form>
-    <center><a href=" {% url 'tasklist' %}">На главную</a></center>
+    <center><input type="Submit" value="Подтвердить" class="floating-button"/></center><br>
+    </form></center>
+    <center><a href=" {% url 'tasklist' %}" class="glow-button">На главную</a></center>
 </body>
 {% endblock content %}
